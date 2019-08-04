@@ -1,0 +1,83 @@
+form {
+}
+#anketa {
+	background: #CEF6F5;
+	margin: 0;
+	padding: 20px;
+	border-top: 25px solid red;
+	border-right: 25px solid blue;
+	border-bottom: 25px solid green;
+	border-left: 25px solid yellow;
+	border-radius: 10px;
+}
+button:hover {
+	cursor: pointer;
+}
+#startgoogling_button {
+	border-radius: 50%;
+}
+#startgoogling_button_img {
+	width: 20px;
+	height: 20px;
+}
+#sidebarsearch {
+	margin: 0 auto;
+	text-align: left;
+}
+fieldset {
+	background: #F5F6CE;
+	font: normal 18px arial;
+	position: relative;
+}
+#fieldset4 {
+	display: none;
+}
+legend {
+	text-align: center;
+}
+.required_star {
+	margin: 0 0 0 -8px;
+	color: red;
+}
+input::placeholder {
+	color: #A4A4A4;
+}
+input.input_text {
+	background: #A9F5A9;
+	border: 1px solid green;
+}
+input.input_text:focus {
+	border: 2px solid red;
+	background: yellow;
+}
+textarea {
+	background: #F3E2A9;
+}
+textarea::placeholder {
+	color: gray;
+}
+#avatar_button{
+	width: 296px;
+	height: 296px;
+	background: #ccc;
+	border: 3px dashed gray;
+	border-radius: 10px;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	overflow: hidden;
+	text-align: center;
+}
+#avatar_button:hover {
+	cursor: pointer;
+	border: 3px dashed green;
+}
+.icon-avatar {
+	margin: auto;
+	font: normal 200px fdgdfg;
+	color: #aaa;
+}
+#avatar_button p {
+	font-size: 14px;
+}
