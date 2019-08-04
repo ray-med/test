@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Образец формы</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/fav.ico">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/forms.css" rel="stylesheet" type="text/css">
+		<link href="css/iconsvg.css" rel="stylesheet" type="text/css">
+		<meta charset="utf-8">
+		<!--<meta viewport>-->
+	</head>
+	
+	<body>
+		<header>
+			<!--здесь забабахаю <nav> и лого-->
+		</header>
+		<div id="content">
+			<h1>Анкета</h1>
+			<div id="anketdiv">
+			<form id="anketa" name="anketa"><!--вместо почты можно указать обработчик: action="obrabot4ic.php", entype можно не указывать вроде-->
+				<p>Внимание! Звездочкой "<span style="color:red;">*</span>" отмечены поля, обязательные для заполнения.</p>
+				
+				<fieldset title="fieldset1" id="fieldset1">
+					<legend>Давайте познакомимся!</legend>
+					<p><label><b><span class="required_star">*</span>Ваше имя:</b><br>
+						<input type="text" class="input_text" name="firstName" size="20" maxlength="19" placeholder="Имя" autofocus></label><br>
+						<label><b>Ваше отчество:</b><br>
+						<input type="text" class="input_text" name="fatherName" size="20" maxlength="19" placeholder="Отчество"></label><br>
+						<label><b>Ваша фамилия:</b><br>
+						<input type="text" class="input_text" name="lastName" size="20" maxlength="19" placeholder="Фамилия" ></label><br>
+						<label><b><span class="required_star">*</span>Логин:</b><br>
+						<input type="text" class="input_text" name="login" size="20" maxlength="19" placeholder="Введите логин" ></label><br>
+						<label><b><span class="required_star">*</span>Пароль:</b><br>
+						<input type="password" class="input_text" name="password" size="20" maxlength="19" placeholder="Придумайте пароль" ></label>
+					</p>
+					<p><b>Как дела?</b><br>
+						<label><input type="radio" name="dela" value="fine">отлично</label><br>
+						<label><input type="radio" name="dela" value="well">хорошо</label><br>
+						<label><input type="radio" name="dela" value="normal">нормально</label><br>
+						<label><input type="radio" name="dela" value="bad">плохо</label>
+					</p>
+					<label for="avatar_load" id="avatar_button">
+						<i class="icon-avatar"></i>
+						<p>Нажмите, чтобы загрузить свой аватар.</p>
+					</label>
+					<input type="file" id="avatar_load" name="avatar_load" multiple accept="image/*,image/jpeg" style="display: none;">
+				</fieldset>
+				
+				<fieldset title="disabled fieldset" id="fieldset2" disabled>
+					<legend><del>Ваше отношение к животным</del></legend>
+					<p><b>Любите ли вы собак?</b><br>
+						<label><input type="radio" name="doge" value="yes">да</label><br>
+						<label><input type="radio" name="doge" value="no" checked>нет</label>
+					</p>
+					<p><b>Какие домашние животные<br>у вас есть?</b><br>
+						<label><input type="checkbox" name="pets" value="dog">собака</label><br>
+						<label><input type="checkbox" name="pets" value="cat" checked>кошка</label><br>
+						<label><input type="checkbox" name="pets" value="hamster">хомяк</label><br>
+						<label><input type="checkbox" name="pets" value="snail">улитка</label><br>
+						<label><input type="checkbox" name="pets" value="fish" checked>рыбки</label>
+					</p>
+				</fieldset>
+				
+				<fieldset title="fieldset3" id="fieldset3">
+					<legend>Расскажите о себе</legend>
+					<p><b>Укажите Ваши знания в программировании:</b><br>
+						<label><input type="checkbox" name="skills" value="know_html">HTML</label><br>
+						<label><input type="checkbox" name="skills" value="know_css">CSS</label><br>
+						<label><input type="checkbox" name="skills" value="know_js">JavaScript</label><br>
+						<label><input type="checkbox" name="skills" value="know_php">PHP</label><br>
+						<label><input type="checkbox" name="skills" value="know_frameworks">различные фреймворки и библиотеки</label><br>
+						<label><input type="checkbox" name="skills" value="know_python">Python</label><br>
+						<label><input type="checkbox" name="skills" value="know_java">Java</label><br>
+						<label><input type="checkbox" name="skills" value="know_sql">SQL</label>
+					</p>
+					<p><b>Где вы учились программированию?</b><br>
+						<label><input type="checkbox" name="study" value="linschool">школа</label><br>
+						<label><input type="checkbox" name="study" value="linacademy">ВУЗ</label><br>
+						<label><input type="checkbox" name="study" value="lincourses">курсы</label><br>
+						<label><input type="checkbox" name="study" value="linbooks">книги</label>
+					</p>
+				</fieldset>
+				
+				<fieldset title="fieldset4" id="fieldset4">
+					<legend>Ваша философия</legend>
+					<p><b>Быть или не быть?</b><br>
+						<label><input type="radio" name="doge" value="yes">быть</label><br>
+						<label><input type="radio" name="doge" value="no">не быть</label>
+					</p>
+				</fieldset>
+				
+				<p>
+					Комментарий:<br>
+					<textarea name="comment" cols="81" rows="3" placeholder="Здесь можно ввести свой комментарий"></textarea>
+				</p>
+				<p>
+					<input type="submit" value="Отправить анкету">
+					<input type="reset" value="Очистить анкету">
+				</p>
+			</form>
+			</div>
+			<aside>
+				<form id="sidebarsearch" name="sidebarsearch">
+					<p>Поиск по сайту<br>
+						<input type="search" class="input_search" name="googling" size="32" maxlength="30" placeholder="давай искать">
+						<button id="startgoogling_button" name="startgoogling_button">
+							<i class="icon-loop"></i>
+						</button>
+					</p>
+				</form>
+				<p id="txt" onclick="test()">20</p>
+			</aside>
+		</div>
+		
+		<footer>
+			<div id="copyright">
+				<p class="footer_p"><!--потом переделать в список-->
+				Тестовый сайт-форма &copy ЛСК 2019г<br>
+				Тестовый сайт-форма &copy ЛСК 2019г<br>
+				Тестовый сайт-форма &copy ЛСК 2019г<br>
+				Тестовый сайт-форма &copy ЛСК 2019г
+				</p>
+			</div>
+			<ul id="social_list">
+				<li><a href="http://www.facebook.com" 	id="facebook">	<i class="icon-facebook-rect">	</i></a></li>
+				<li><a href="http://www.vk.com" 		id="vk">		<i class="icon-vkontakte-rect">	</i></a></li>
+				<li><a href="http://www.linkedin.com" 	id="linkedin">	<i class="icon-linkedin-rect">	</i></a></li>
+				<li><a href="https://www.youtube.com" 	id="youtube">	<i class="icon-youtube-play">	</i></a></li>
+				<li><a href="http://www.instagram.com" 	id="instagram">	<i class="icon-instagram-filled"></i></a></li>
+				<li><a href="http://www.twitter.com" 	id="twitter">	<i class="icon-twitter-bird">	</i></a></li>
+				<li><a href="http://www.icq.com" 		id="icq">		<i class="icon-icq">			</i></a></li>
+			</ul>
+		</footer>
+		<script src="site.js"></script>
+	</body>
+</html>
